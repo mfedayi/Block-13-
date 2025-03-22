@@ -6,7 +6,9 @@
  * @returns {number} temperature in °C
  */
 function convertToCelsius(f) {
-  // TODO
+  const vFahrenheit = f - (32 * 5) / 9;
+  console.log(vFahrenheit);
+  return vFahrenheit;
 }
 
 /**
@@ -23,7 +25,23 @@ function convertToCelsius(f) {
  * the given Fahrenheit temperature `f`
  */
 function describeTemperature(f) {
-  // TODO
+  // The createMessage() function should take the Fahrenheit temperature and the Celsius equivalent as arguments and determine how it feels based on certain temperature ranges.
+  // It should return a message telling the user the conversion from Fahrenheit to Celsius and how that feels.
+  if (f < 32) {
+    return "very cold";
+  }
+  if (f < 64) {
+    return "cold";
+  }
+  if (f < 86) {
+    return "warm";
+  }
+  if (f < 100) {
+    return "hot";
+  }
+  if (f >= 100) {
+    return "very hot";
+  }
 }
 
 /**
@@ -31,7 +49,8 @@ function describeTemperature(f) {
  * @returns {number} a random integer in the range [0, `limit`)
  */
 function getRandomInt(limit) {
-  // TODO
+  const randTemp = Math.floor(Math.random() * limit);
+  return randTemp;
 }
 
 // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
